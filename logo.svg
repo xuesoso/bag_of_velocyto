@@ -18,8 +18,8 @@
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
    sodipodi:docname="logo.svg"
    inkscape:export-filename="/home/soso/GitRepositories/bag_of_velocyto/logo.png"
-   inkscape:export-xdpi="299.966"
-   inkscape:export-ydpi="299.966">
+   inkscape:export-xdpi="500"
+   inkscape:export-ydpi="500">
   <defs
      id="defs2">
     <marker
@@ -37,7 +37,6 @@
          transform="scale(0.8) translate(12.5,0)" />
     </marker>
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient872"
        osb:paint="gradient">
       <stop
@@ -73,16 +72,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6568542"
-     inkscape:cx="-4.1108209"
+     inkscape:cx="-48.746937"
      inkscape:cy="11.279832"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="false"
-     inkscape:window-width="1912"
-     inkscape:window-height="1035"
-     inkscape:window-x="3000"
-     inkscape:window-y="829"
+     inkscape:window-width="2992"
+     inkscape:window-height="1955"
+     inkscape:window-x="0"
+     inkscape:window-y="37"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
