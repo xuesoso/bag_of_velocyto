@@ -1,3 +1,4 @@
+![Logo](logo.png)
 # Bag of Velocyto
 Cluster (Slurm) submission of velocyto alignment for RNA velocity analysis.
 
