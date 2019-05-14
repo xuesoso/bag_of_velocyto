@@ -8,16 +8,21 @@
     object to traverse between each feature to its parent molecule.
     We will also keep track of features which are annotated as repeats, and we
     export them as a separate repeat masker gtf.
+    By default, will save the output gtf and repeatmask as infile.gtf and
+    infile.repeatmask.gtf
+
+    infile: Argument supplying the location of the input gff3 file.
+    chunk_size: number of lines to store on buffer before writing.
 '''
 
 import os, sys
 
 infile = sys.argv[1]
 assert infile.split('.')[-1] == 'gff3', 'input file must end with .gff3'
+chunk_size = 1000
 tmpfile = infile.replace('.gff3', '.tmp')
 outfile = infile.replace('.gff3', '.gtf')
 maskfile = infile.replace('.gff3', '.repeatmask.gtf')
-chunk_size = 1000
 
 print('Converting %s to gtf file' %infile)
 
