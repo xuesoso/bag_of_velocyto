@@ -1,7 +1,7 @@
 # Bag of Velocyto
 Cluster (Slurm) submission of velocyto alignment for RNA velocity analysis.
 
-Inspired by [Bag of Stars](https://github.com/iosonofabio/bag_of_stars)
+Inspired by [iosonofabio/Bag of Stars](https://github.com/iosonofabio/bag_of_stars)
 
 Work in progress
 ----------------
