@@ -79,28 +79,30 @@ with open(infile, 'r') as f:
             if feature_type != '':
                 if feature_type == 'exon' and source != 'repeatmasker':
                     key_val = curr[8].split(';')
+                    exon_id = 'None'
                     for i in key_val:
                         if 'ID=' in i:
                             exon_id = i.replace('ID=', '')
-                    gene_id = exon_id
-                    if exon_id not in exon_to_transcript_model.keys():
-                        transcript_id = exon_id
-                    else:
-                        transcript_id = exon_to_transcript_model[exon_id]
-                    while type_dict[gene_id] != 'gene' and \
-                          gene_id in parent_dict.keys():
-                        gene_id = parent_dict[gene_id]
-                    transcript_name = 'transcript_name "'+str(transcript_id)+'"'
-                    transcript_id = 'transcript_id "'+str(transcript_id)+'"'
-                    gene_name = 'gene_name "'+str(gene_id)+'"'
-                    gene_id = 'gene_id "'+str(gene_id)+'"'
-                    exon_id = 'exon_id "'+str(exon_id)+'"'
-                    convert = '; '.join([transcript_name, transcript_id,\
-                                         gene_name, gene_id])
-                    convert += '\n'
-                    curr[8] = convert
-                    curr = '\t'.join(curr)
-                    converted_lines.append(curr)
+                    if exon_id != 'None':
+                        gene_id = exon_id
+                        if exon_id not in exon_to_transcript_model.keys():
+                            transcript_id = exon_id
+                        else:
+                            transcript_id = exon_to_transcript_model[exon_id]
+                        while type_dict[gene_id] != 'gene' and \
+                              gene_id in parent_dict.keys():
+                            gene_id = parent_dict[gene_id]
+                        transcript_name = 'transcript_name "'+str(transcript_id)+'"'
+                        transcript_id = 'transcript_id "'+str(transcript_id)+'"'
+                        gene_name = 'gene_name "'+str(gene_id)+'"'
+                        gene_id = 'gene_id "'+str(gene_id)+'"'
+                        exon_id = 'exon_id "'+str(exon_id)+'"'
+                        convert = '; '.join([transcript_name, transcript_id,\
+                                             gene_name, gene_id])
+                        convert += '\n'
+                        curr[8] = convert
+                        curr = '\t'.join(curr)
+                        converted_lines.append(curr)
                 elif source == 'repeatmasker':
                     repeatmasker.append(line)
                 else:
